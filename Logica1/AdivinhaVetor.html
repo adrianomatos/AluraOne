@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha Vetor</title>
+</head>
+
+<body>
+
+    <b>Qual pizza quer pedir? </b>
+    <input type="text">
+    <button>Verificar</button>
+
+    <script>
+        
+        /* Inserindo em arrays e aleatórios
+        var numeros = [];
+        numeros.push(sorteia());
+        numeros.push(sorteia());
+        numeros.push(sorteia());
+        console.log(numeros);
+
+        function sorteia(){
+            return Math.round(Math.random() * 10);
+        }
+        */
+
+        var lista = ["Portuguesa", "Mussarela", "Atum", "Margherita"];
+
+        //RECEBE CAMPO INPUT
+        var input = document.querySelector("input");
+        input.focus();
+
+        var acertou = false;
+
+        function verificaValor() {
+            for (var posicao = 0; posicao < lista.length; posicao++) {
+
+                if (lista[posicao] == input.value) {
+                    //alert("Posição "+posicao+". Você acertou, PARABÉNS!");
+                    alert("Pizza sabor "+lista[posicao]+". Pedido realizado, aguarde!")
+                    acertou = true;
+                    break;
+                } /*else {
+                    alert("Posição "+posicao+". Você ERROU!");
+                }*/
+            }
+            if (acertou == false) {
+                alert("Pizza em falta, escolha outro sabor");
+            }
+            input.value = "";
+            input.focus();
+        }
+
+        //RECEBE CAMPO BUTTON
+        var button = document.querySelector("button");
+
+        //RECEBE FUNÇÃO MAS SÓ EXECUTA AO SER CLICADO
+        button.onclick = verificaValor;
+
+    </script>
+</body>
+
+</html>

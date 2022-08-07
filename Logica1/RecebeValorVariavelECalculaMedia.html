@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <h1>Cálculo de Média Variável</h1>
+</body>
+    <script>
+        
+        function pulaLinha(){
+            document.write("<br><br>")
+
+        }
+
+        function mostra(msg){
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var quantEventos = parseInt(prompt("Insira a quantidade de eventos: "));
+        var contador = quantEventos;
+        var contador2 = 1;
+        var valorEvento = 0;
+        var media = 0;
+        while(contador > 0){
+            valorEvento = valorEvento + parseInt(prompt("Qual valor do "+contador2+"º evento?"));
+            contador--;
+            contador2++;
+        }
+        media = valorEvento/quantEventos;
+        mostra("Média dos eventos: "+media);
+
+    </script>
+</html>

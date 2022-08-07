@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega</title>
+</head>
+
+<body>
+    <h1>Mega da Furada</h1>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var numeroPensado = parseInt(prompt("Qual seu número?"));
+        var numeroSorteado = Math.round(Math.random() * 10);
+
+        if (numeroPensado == numeroSorteado) {
+            mostra("ACERTOU!");
+        } 
+        else{
+            if(numeroPensado > numeroSorteado){
+                mostra("Errou, o número sorteado foi menor");
+            }
+            else {
+                mostra("Errou, o número sorteado foi maior");
+            }
+            mostra("O número sorteado foi: "+numeroSorteado);
+        }
+
+    </script>
+
+</body>
+
+</html>

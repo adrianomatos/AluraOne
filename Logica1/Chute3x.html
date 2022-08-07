@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega 2.0</title>
+</head>
+
+<body>
+    <h1>Mega da Furada</h1>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var numeroSorteado = Math.round(Math.random() * 10);
+        var contador = 1;
+        while (contador <= 3) {
+            var numeroPensado = parseInt(prompt("Qual seu "+contador+"º chute?"));
+
+            if (numeroPensado == numeroSorteado) {
+                mostra("ACERTOU!");
+                contador = 4; // OU break;
+            }
+            else {
+                if (numeroPensado > numeroSorteado) {
+                    mostra("Errou, o número sorteado foi menor");
+                }
+                else {
+                    mostra("Errou, o número sorteado foi maior");
+                }
+            }
+            contador++;
+        }
+        mostra("FIM. O número sorteado foi: " + numeroSorteado);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Aleatório e Único</title>
+</head>
+
+<body>
+    <input type="text">
+    <button>Verificar Aleatório e Único</button>
+
+    <script>//Inserindo em arrays, aleatórios c/ quant variável, dif 0
+        function sorteia() {
+            return Math.round(Math.random() * 10);
+        }
+
+        function sorteiaQuantidade(quant) {
+            var segredos = [];
+            var contador = 1;
+            while (contador <= quant) {
+                var numeroAleatorio = sorteia();
+                if (numeroAleatorio != 0) {
+                    var achou = false;
+                    for (var x = 0; x < segredos.length; x++) {
+                        if (segredos[x] == numeroAleatorio) {
+                            achou = true;
+                            break;
+                        }
+                    }
+                    if (achou == false) {
+                        segredos.push(numeroAleatorio);
+                        contador++;
+                    }
+                }
+            }
+            return segredos;
+        }
+
+        //var quantosNumerosAleatorios = parseInt(prompt("Qauntos números quer adicionar?"));
+        var segredos = sorteiaQuantidade(3);
+        console.log(segredos);
+
+        //RECEBE CAMPO INPUT
+        var input = document.querySelector("input");
+        input.focus();
+        var achouNaPesquisa = false;
+
+        function verificaValor() {
+            for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+                if (segredos[posicao] == input.value) {
+                    alert("Encontrou na posição " + posicao)
+                    achouNaPesquisa = true;
+                    break;
+                }
+            }
+            if (achouNaPesquisa == false) {
+                alert("Não achou em nenhuma posição");
+            }
+            input.value = "";
+            input.focus();
+        }
+
+        //RECEBE CAMPO BUTTON
+        var button = document.querySelector("button");
+
+        //RECEBE FUNÇÃO MAS SÓ EXECUTA AO SER CLICADO
+        button.onclick = verificaValor;
+
+    </script>
+</body>
+
+</html>

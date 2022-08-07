@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+
+<body>
+    <h1>Banco Tauá</h1>
+
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var adriano = 150;
+        var rebeca = 200;
+
+        function saca(valor, nomeOrigem, valorOrigem) {
+            valorOrigem -= valor;
+            mostra("O saldo de " + nomeOrigem + " é: " + valorOrigem);
+        }
+
+        function saca2(valor, contaOrigem){
+            return contaOrigem - valor;
+        }
+
+        function deposita(valor, nomeDestino, valorDestino) {
+            valorDestino += valor;
+            mostra("O saldo de " + nomeDestino + " é: " + valorDestino);
+        }
+
+        function transferir(valor, nomeOrigem, valorOrigem, nomeDestino, valorDestino) {
+            saca(valor, nomeOrigem, valorOrigem);
+            deposita(valor, nomeDestino, valorDestino);
+        }
+
+        transferir(100, "Rebeca", rebeca, "Adriano", adriano);
+        saca(50, "Adriano", adriano);
+        deposita(50, "Rebeca", rebeca);
+
+        var saldo = saca2(100, adriano);
+        mostra("Saldo de Adriano é: "+saldo);
+
+    </script>
+
+</body>
+
+</html>

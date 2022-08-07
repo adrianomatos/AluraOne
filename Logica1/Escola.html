@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola</title>
+</head>
+
+<body>
+    <h1>Escola</h1>
+
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var num1 = prompt("Digite a Nota1");
+        var num2 = prompt("Digite a Nota2");
+        var num3 = prompt("Digite a Nota3");
+        var num4 = prompt("Digite a Nota4");
+        var mediaFinal = (parseInt(num1) + parseInt(num2) +
+         parseInt(num3) + parseInt(num4)) / 4;
+
+        mostra("Media: "+mediaFinal);
+
+        if (mediaFinal >= 6) {
+            mostra("Situação: Aprovado");
+        } else if (mediaFinal < 4) {
+            mostra("Situação: Reprovado");
+        } else{
+            mostra("Situação: AF");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var login = "adriano";
+        var senha = "123";
+        var tentativa = 3;
+
+        while (tentativa > 0) {
+
+            var loginDigitado = prompt("Informe o login: ");
+            var senhaDigitado = prompt("Informe a senha: ");
+
+            if (loginDigitado == login && senhaDigitado == senha) {
+                mostra("LOGIN realizado com sucesso!");
+                break;
+            } else {
+                mostra("Login inválido");
+            }
+            tentativa--;
+        }
+
+    </script>
+
+</body>
+
+</html>

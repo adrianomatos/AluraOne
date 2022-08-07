@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+
+<body>
+    <h1>Cálculo de Banha</h1>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        function calculaIMC(peso, altura){
+            var IMC = peso / (altura * altura);
+            //return Math.round(IMC);
+            return IMC;
+        }
+
+        var nome = prompt("Qual seu nome?");
+        var peso = prompt(nome+", qual seu peso?");
+        var altura = prompt(nome+", qual sua altura?");
+        var imc = calculaIMC(peso, altura);
+
+        alert(nome+", seu IMC é: "+ imc);
+        mostra(nome+"<br> Seu IMC é: "+imc);
+
+        if (imc < 18.5) {
+            mostra("Situação: Desnutrido");
+        } else if (imc >= 18.6 && imc < 24.9) {
+            mostra("Situação: Normal");
+        } else if (imc >= 25 && imc <= 30) {
+            mostra("Situação: Sobrepeso");
+        } else if (imc > 30) {
+            mostra("Situação: Gordo");
+        } else{
+            mostra("Situação: ERRO");
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
