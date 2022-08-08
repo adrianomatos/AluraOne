@@ -20,29 +20,40 @@
             pulaLinha();
         }
 
-        function calculaIMC(peso, altura){
+        function calculaIMC(peso, altura) {
             var IMC = peso / (altura * altura);
             //return Math.round(IMC);
             return IMC;
         }
 
         var nome = prompt("Qual seu nome?");
-        var peso = prompt(nome+", qual seu peso?");
-        var altura = prompt(nome+", qual sua altura?");
+        var peso = prompt(nome + ", qual seu peso?");
+        var altura = prompt(nome + ", qual sua altura?");
         var imc = calculaIMC(peso, altura);
 
-        alert(nome+", seu IMC é: "+ imc);
-        mostra(nome+"<br> Seu IMC é: "+imc);
+        var idade = parseInt(prompt("Digite sua idade"));
+
+        //////////// VERIFICAR SE É UM NÚMERO /////////////
+        /* 
+        while (isNaN(idade)) {
+            idade = parseInt(prompt("Digite sua idade"));
+        }
+        alert(idade);
+        */
+        ////////////////////////////////////
+
+        alert(nome + ", seu IMC é: " + imc);
+        mostra(nome + "<br>Seu IMC é: " + imc);
 
         if (imc < 18.5) {
             mostra("Situação: Desnutrido");
         } else if (imc >= 18.6 && imc < 24.9) {
             mostra("Situação: Normal");
         } else if (imc >= 25 && imc <= 30) {
-            mostra("Situação: Sobrepeso");
+            mostra("Situação: Gordinho");
         } else if (imc > 30) {
             mostra("Situação: Gordo");
-        } else{
+        } else {
             mostra("Situação: ERRO");
         }
 
