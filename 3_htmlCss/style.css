@@ -1,0 +1,441 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: #CCCCCC;
+    padding: 20px 0;
+}
+
+.caixa {
+    width: 940px;
+    position: relative;
+    /* 0 top/dow e auto lados */
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    /* metade da imagem */
+    top: 110px;
+    right: 0px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #C78C19;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /* background: #CCCCCC; */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /* padding descontando do elemento */
+    box-sizing: border-box;
+    border: solid 2px #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+    font-size: 25px;
+}
+
+.produtos li:hover h2 {
+    font-size: 40px;
+}
+
+.produtos li:active {
+    border-color: red;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    /* pequena imagem replicada pelo CSS */
+    background: url(img/bg.jpg);
+    padding: 40px 0;
+}
+
+.copyright {
+    font-size: 13px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* CSS PÁGINA DE CONTATO */
+main {
+    /* width: 940px;
+    margin: 0 auto; */
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18x;
+    border: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.enviar:hover {
+    background: orangered;
+    transform: scale(1.2);
+    /* ESCALA + ROTATE JUNTAS 
+    transform: scale(1.2) rotate(1deg);*/
+}
+
+
+/* TABELA */
+table {
+    margin: 20px 0;
+    border: solid 1px black;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    text-align: center;
+}
+
+td,
+th {
+    border: solid 1px black;
+    padding: 8px 15px;
+}
+
+tfoot td {
+    font-weight: bold;
+    background: #CCCCCC;
+}
+
+
+/* ######################## */
+/* PÁGINA INICIAL */
+.banner {
+    width: 100%;
+}
+
+
+
+/* ######################## */
+/* SOBRE A SECRETARIA */
+.principal {
+    padding-top: 3em;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: center;
+    /* em significa proporc. px */
+    font-size: 2em;
+    margin-bottom: 1em;
+    /* limpa float usado, ao terminar sessão */
+    clear: left;
+    /* sombras em letras */
+    /* text-shadow: 3px 3px red; */
+
+    /* color:rgb(red, green, blue);*/
+    /* COR c/ opacidade */
+    /* color: rgba(0, 0, 0, 0.8); */
+
+}
+
+/* .titulo-principal::first-letter {
+    font-weight: bold;
+}
+
+
+.titulo-principal::before {
+    content: "[ ";
+}
+
+.titulo-principal::after {
+    content: " ]";
+} */
+
+/* p::first-line {
+    font-style: italic;
+} */
+
+.principal p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+
+
+
+/* ######################## */
+/* NOSSO ENDEREÇO */
+.mapa {
+    padding: 3em 0;
+    /* vai do quase branco ao cinza e junta com o outro cinza */
+    background: linear-gradient(180deg, #FEFEFE, #CCCCCC);
+    /* 90º, laranja 25% e mais 03 cores,  */
+    /* background: linear-gradient(90deg, orange 25%, blue, red, black); */
+    /* em formato radil não permite inclinação */
+    /* background: radial-gradient(orange 50%, blue, red, black); */
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 2em;
+    text-align: center;
+}
+
+
+
+
+/* ######################## */
+/* NOSSOS VALORES */
+.beneficios {
+    /* margin-top: 3em; */
+    padding: 3em 0;
+    background: #CCCCCC;
+
+    /* teste sombra 
+    inset - à partir do centro c/ (sombras internas não são deslocáveis)
+    x y espaçamento cor */
+    /* box-shadow: inset 0 0 30px blue; */
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    /* Tamnaho da linha */
+    line-height: 1.5;
+}
+
+.itens::before {
+    content: "★";
+}
+
+/* PRIMEIRO ÍTEM 
+-1ª: first-child
+-meio: nth-child(3) 
+-último: last-child
+-pares: nth-child(2n)
+*/
+/* .itens:first-child {
+    font-weight: bold;
+} */
+
+.imagem-beneficios {
+    width: 60%;
+    /* % de quanTo quero exibir */
+    opacity: 1;
+    transition: 400ms;
+
+    /* SOMBRA: x y cor */
+    /* box-shadow: 10px 10px red; */
+
+    /* SOMBRA: x y grau_espalhamento cor */
+    /* box-shadow: 10px 10px 10px black; */
+
+    /* SOMBRA: x y grau_espalhamento eixo cor */
+    /* box-shadow: 10px 10px 20px 20px red; */
+
+    /* SOMBRA: x y grau_espalhamento eixo cor, OUTRAS CORES */
+    /* box-shadow: 10px 10px 20px 20px red, -10px -10px yellow; */
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.7;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+
+
+
+
+.video {
+    /* width: 560px; */
+    width: 640px;
+    margin: 2em auto;
+}
+
+
+
+/* ##### Seletores avançados ##### */
+/* 
+1º conteúdo FILHO
+main > p{
+    background: red;
+} */
+
+/* 
+1º conteúdo IRMÃO
+img + p {
+    background: red;
+} */
+
+/* 
+TODOS OS conteúdo IRMÃOS
+img ~ p {
+    background: red;
+} */
+
+/* 
+TODOS EXCETO ......
+.principal p:not(#missao) {
+    background: #C78C19;
+} */
+
+/* CÁLCULOS COM CSS */
+/* width: calc((100% / 3) - 10px); */
+
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 480px) {
+
+    .caixa,
+    .principal,
+    .mapa-conteudo,
+    .conteudo-beneficios {
+        width: auto;
+    }
+
+    .principal {
+        padding: 10px;
+    }
+
+    .lista-beneficios {
+        padding: 10px;
+        /* box-shadow: 1px 1px 1px black; */
+    }
+
+    .imagem-beneficios {
+        padding: 0 10px;
+
+    }
+
+    .video {
+        width: 95%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+    }
+
+    .lista-beneficios,
+    .imagem-beneficios {
+        width: 95%;
+    }
+
+    /* PRODUTOS */
+    .produtos {
+        width: 100%;
+    }
+
+    .produtos li {
+        width: 90%;
+        margin: 20px;
+    }
+
+    /* CONTATO */
+    /* form {} */
+
+}

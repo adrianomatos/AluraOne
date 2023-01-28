@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(msg) {
+        document.write(msg);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930;
+
+    while (anoCopa <= 2022) {
+        mostra(anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+    mostra("Último ano de copa: " + anoCopa);
+
+    for (var x = 1930; x <= 2022; x++) {
+        mostra(x);
+    }
+
+</script>

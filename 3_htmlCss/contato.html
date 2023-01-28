@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - SEMUJIDF</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="caixa">
+            <h1><img src="img/logo.png" alt="Logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form action="" method="post">
+            <label for="nome">Nome e sobrenome</label>
+            <input class="input-padrao" type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail</label>
+            <input class="input-padrao" type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label for="telefone">Telefone</label>
+            <input class="input-padrao" type="tel" name="telefone" id="telefone" placeholder="(XX) X.XXXX-XXXX"
+                required>
+
+            <label for="msg">Mensagem</label>
+            <textarea class="input-padrao" name="msg" id="msg" cols="30" rows="10" placeholder="Digite sua mensagem"
+                required></textarea>
+
+            <fieldset>
+                <legend>Como prefere nosso contato?</legend>
+
+                <label for="radio-email">
+                    <input type="radio" name="radio" id="radio-email" value="radio-email">
+                    E-mail
+                </label>
+
+                <label for="radio-fone">
+                    <input type="radio" name="radio" id="radio-fone" value="radio-fone">
+                    Telefone
+                </label>
+
+                <label for="radio-zap">
+                    <input type="radio" name="radio" id="radio-zap" value="radio-zap" checked>
+                    Whatsapp
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <select name="" id="">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox" for="newslater">
+                <input type="checkbox" name="newslater" id="newslater">
+                Gostaria de receber nossas novidades por email?
+            </label>
+
+            <input class="enviar" type="submit" value="Enviar formulário">
+
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Horário de funcionamento</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+                <tr>
+                    <td>Segunda a Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>8h ~ 12h</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2">OBS: Possível reservar horário.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </main>
+
+    <footer>
+        <img src="img/logo-branco.png" alt="Logo">
+        <p class="copyright">&copy; Copyright SEMUJIDF - 2023</p>
+    </footer>
+
+</body>
+
+</html>

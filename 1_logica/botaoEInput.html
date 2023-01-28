@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<input type="text">
+<button>Compare</button>
+
+<script>
+
+    var segredo = Math.round(Math.random() * 10);
+    // var segredo = 5;
+
+    var input = document.querySelector("input");
+
+    input.focus();
+
+    function verifica() {
+        if (input.value == segredo) {
+            alert("Acertou");
+        } else {
+            alert("Você errou");
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>

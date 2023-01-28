@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        var meuNome = "Adriano"
+        mostra("Oi");
+        mostra("Meu nome é " + meuNome);
+
+        function exibeTitulo(titulo) {
+            document.write("<h1>" + titulo + "</h1>");
+            //pulaLinha();
+        }
+
+        function exibeParagrafo(paragrafo) {
+            document.write("<p>" + paragrafo + "</p>");
+            //pulaLinha();
+        }
+
+        exibeTitulo("Bem-vindos");
+        exibeParagrafo("Este é um simples programa");
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

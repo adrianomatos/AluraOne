@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(msg) {
+            document.write(msg);
+            pulaLinha();
+        }
+
+        // Boa prática é retornar o valor para quem solicitou 
+        // possa fazer o tratamento das informações no qual deseja
+        function calculaIMC(peso, altura) {
+            // var imc = peso / (altura * altura);
+            // return imc;
+            // OU
+            return peso / (altura * altura);
+        }
+
+        var imcAdriano = calculaIMC(95, 1.78);
+        mostra("O IMC de Adriano é: " + imcAdriano);
+
+        var imcRebeca = calculaIMC(110, 1.65);
+        mostra("O IMC de Rebeca é: " + imcRebeca);
+
+        mostra("A soma dos IMCs é: " + (imcAdriano + imcRebeca))
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
